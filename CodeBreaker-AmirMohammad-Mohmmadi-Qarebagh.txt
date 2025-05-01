@@ -1,24 +1,12 @@
 name = امیرمحمد محمدی قره باغ
+
+
+نام رمز = [محرمانه]
+
+
 Student id = 4032140121
 I solved the Challenge!
 
-
-this is my solution :
-
-
-cipher = """]JK[RT)VRPJV5)Nb)LXMNK[NJTN[)KXcX[P*)]X)VXJVJbN)VJ)[J)QJU)TJ[MR)_J)YJbJV6N)VJTQOR)[J)[JVcPX\QJNN)TJ[MR*)QJUJ)KN)YR\Q)KX[X)_J)LXMN6N)TQXMN])[J)MJ[)[NYX\R]X[b6N)VJTQOR)N[\JU)TXW*)\JOJ[6N)]X)]JcN)\QX[^)\QXMN*)UX]OJW)LXMN6N)TQXM)[J)KN)\X[J]6N)Y^UU)[NZ^N\])MJ[)33Q]]Y\C88PR]Q^K7LXV8LN6\QJQNM8\J[NWJTQ6VJ][R\33)N[\JU)TXWRM)_J)KN)LXVV^WR]b6N)LXMNK[NJTN[QJ)KNYNb_JWMRM7_J)OJ[JVX\Q)WJTXWRM)TN)WJV6N)TQXM)_J)LXMN6R)MJWN\QSXXNR)[J)MJ[)LXMN6R)TN)N[\JU)VRTXWRM)PQJ[J[)MJQRM7"""
-def decrypt_ascii_caesar(text, shift=86):
-    plain = []
-    for c in text:
-        o = ord(c)
-        if 32 <= o <= 126:
-            plain.append(chr(32 + ((o - 32 + shift) % 95)))
-        else:
-            plain.append(c)
-    return ''.join(plain)
-
-plaintext = decrypt_ascii_caesar(cipher)
-print(plaintext)
 
 
 
