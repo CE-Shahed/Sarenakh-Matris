@@ -1,6 +1,36 @@
 Caesar Cipher
 ba shift +9 be payam zir miresim
 
+def decrypt_caesar_ascii(cipher_text, key):
+    result = ''
+    for char in cipher_text:
+        if 32 <= ord(char) <= 126:  # Printable ASCII range
+            shifted = (ord(char) - 32 - key) % 95 + 32
+            result += chr(shifted)
+        else:
+            result += char
+    return result
+
+while True:
+    print("\n--- Caesar Cipher ASCII Decryption ---")
+    cipher_text = input("Enter the encrypted message: ")
+    
+    try:
+        key = int(input("Enter the decryption key (number): "))
+    except ValueError:
+        print("Invalid key. Please enter a number.")
+        continue
+
+    decrypted = decrypt_caesar_ascii(cipher_text, key)
+    print("Decrypted message:", decrypted)
+
+    again = input("Do you want to decrypt another message? (yes/no): ").strip().lower()
+    if again != 'yes':
+        print("Goodbye!")
+        break
+
+
+
 
 TABRIK MIGAM, EY CODEBREAKER BOZORG! TO MOAMAYE MA RA HAL KARDI VA PAYAM-E MAKHFI RA RAMZGOSHAEE KARDI! HALA BE PISH BORO VA CODE-E KHODET RA DAR REPOSITORY-E MAKHFI ERSAL KON! SAFAR-E TO TAZE SHORU SHODE! LOTFAN CODE-E KHOD RA BE SORAT-E PULL REQUEST DAR
 **HTTPS://GITHUB.COM/CE-SHAHED/SARENAKH-MATRIS** ERSAL KONID VA BE COMMUNITY-E CODEBREAKERHA BEPEYVANDID.VA FARAMOSH NAKONID KE NAM-E KHOD VA CODE-I DANESHJOOEI RA DAR CODE-I KE ERSAL MIKONID GHARAR DAHID.
